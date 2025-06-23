@@ -133,7 +133,7 @@ def extract_to_markdown(pdf_path: Path, out_dir: Path):
 # --- Streamlit App ---
 
 def main():
-    st.title("📄 PDF Article Extractor")
+    st.title("📄 Jaffna monitor  PDF Article Extractor")
 
     uploaded = st.file_uploader(
         "Upload one or more PDFs",
