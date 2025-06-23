@@ -153,7 +153,8 @@ def main():
                 pdf_path = tmp / pdf_file.name
                 with open(pdf_path, "wb") as f:
                     f.write(pdf_file.getbuffer())
-                out_dir = tmp / slugify(pdf_file.stem)
+                # FIX: Use Path(pdf_file.name).stem to get filename stem
+                out_dir = tmp / slugify(Path(pdf_file.name).stem)
                 res = extract_to_markdown(pdf_path, out_dir)
                 results.append(res)
 
